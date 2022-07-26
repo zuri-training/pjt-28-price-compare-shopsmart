@@ -7,10 +7,26 @@
     <title>SmartShop</title>
 </head>
 <body>
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissable fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
     <h3>Welcome</h3>
 
+    {% if user.is_authenticated %}
+    <h3>Hello {{ name }}</h3>
+    <h4>You're Successfully logged in.</h4>
+    <button type="submit"><a href="/signout">Signout</a></button>
+
+    {% else %}
     <button type="submit"><a href="/signup">SignUp</a></button>
     <button type="submit"><a href="/login">Login</a></button>
-    <button type="submit"><a href="/logout">Logout</a></button>
+    {% endif %}
 </body>
 </html>
