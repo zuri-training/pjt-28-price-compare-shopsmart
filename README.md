@@ -16,3 +16,4 @@ The user now has full access to the platform after registering. The user can loo
 Shop Smart's USP (unique selling point)
 Our website design and features for the Shop Smart platform were based on actual user research.
 
+![unnamed](https://user-images.githubusercontent.com/84202664/182705476-abb3232d-3283-41d4-839f-43d2e2ced2ad.png)
