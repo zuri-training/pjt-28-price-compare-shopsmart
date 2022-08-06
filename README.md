@@ -82,3 +82,8 @@ Response summary:
 * Shopping influence: 79.1% pricing and 20.9% brand.
 * 95.3% compare prices before shopping.
 * 60.5% compare prices online while 34.9% from walk in stores.
+
+Benefits of shop smart 
+1. Shop smart is user friendly 
+2. Shop smart is a platform that will help customers achieve these in goal in one place with ease.
+3. Shop smart is a all in one platform for top brands,latest deals, promotional sales materials such as coupons, catalogs and online flyers.
