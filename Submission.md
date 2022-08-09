@@ -5,3 +5,7 @@
 >>Name: Timileyin Babalola 
   Track: Backend 
   Tasks: Sign Up Page(https://github.com/zuri-training/pjt-28-price-compare-shopsmart/issues/36)
+
+>>Name: Ifeayinwa Egenwe
+  Track: Frontend 
+  Tasks: products page(https://github.com/zuri-training/pjt-28-price-compare-shopsmart/issues/40)
