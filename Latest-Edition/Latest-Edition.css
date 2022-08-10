@@ -1,0 +1,421 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'poppins', sans-serif;
+    font-size: 1.6rem;
+    
+}
+
+nav a {
+    color: #000000;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;    
+    padding: 0rem 0rem;
+}
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: start;
+    padding:  1rem 0rem 4rem 4rem;
+    text-align: center;
+}
+
+.sign-up {
+    grid-area: signup;  
+    justify-self: end;
+    padding: 1.2rem 3rem;
+    text-align: center;
+    border-radius: .3rem;
+}
+
+.user-avatar-n-txt {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.nav-links {
+    display: grid;
+    grid-template-areas:
+        "logo logo logo home deals category stores pricetracker  signup signup signup";
+        margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    max-width: 100%;
+          
+}
+
+
+.search-bar {
+    color: #fff;
+    padding: -1.5rem 0rem;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 100%;
+    width: 98%;
+    align-items: center;
+    position: relative;
+}
+
+.search {
+    padding: .6em 17.3rem;
+    border: 1px solid #000;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.txt-icon {
+    display: flex;
+    background: rgba(246, 204, 92, 0.75);
+    padding: .7rem .6rem;
+    position: absolute;
+    align-items: center;
+    left: 93.15%;
+    gap: 1rem;
+}
+
+
+.search-txt {
+    color: black;
+    font-size: small;
+}
+
+.txt-icon > img {
+    // height: 2.5vh;
+    width: 22%;
+    filter: brightness(0);
+}
+
+h1 {
+    align-content: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.frst-hr {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 3rem 0;
+}
+
+/* ASIDE-WRAPPER */
+.aside-wrapper {
+    background: #F9FAFC
+}
+
+
+/* All Categories */
+
+.selectBox {
+    position: relative;
+}
+  
+.selectBox select {
+    width: 90%;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 0rem 1rem;
+    margin-top: 2rem;
+    border: none;
+    color: rgb(43, 43, 119);
+    background-color: #F9FAFC    
+}
+  
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+  
+#checkBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+    color: rgb(43, 43, 119);
+}
+  
+#checkBoxes label {
+    display: block;
+}
+
+label {
+    display: block;
+    font-size: small;
+}
+/* Brands*/ 
+#brandsCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+    color: rgb(43, 43, 119);
+    gap: 1rem;
+
+}
+
+// #brandsCheckBoxes label {
+//     display: block;
+// }
+  
+#priceRangeCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#bandWidthCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#capacityRomCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#deviceRamCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#onlineShopCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#specialFeaturesbrandsCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#colorsCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#coreProcessorCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#displaySizeCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+
+}
+
+#osCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+}
+
+#simcardSlotCheckBoxes {
+    display: none;
+    padding: .8rem 2.8rem;
+    line-height: 3rem;
+}
+
+
+
+
+
+
+
+
+/* MAIN-DESCRIPTION*/
+main {
+    display: grid;
+    grid-template-areas: 
+        "aside-col section-col section-col section-col";
+        
+        gap: 2rem;
+        margin: 0 auto;
+    width: 96%; 
+    max-width: 100%;
+    margin-bottom: 6rem;
+}
+ 
+/* ASIDE-COLUMN*/
+.aside-wrapper {
+    grid-area: aside-col;
+   
+}
+
+aside:hover {
+    cursor: pointer;
+    
+}
+
+/* ITEM-DESCRIPTION-SECTION*/
+.section-wrapper {
+    grid-area: section-col;
+    background-color: #F9FAFC
+
+}
+
+h1 {
+    color: #053674;
+}
+
+/* ITEM-DESCRIPTION-ROW */
+.section-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+    width: 96%; 
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 4rem;
+    border-radius: .4rem;
+}
+
+.item-description {
+    margin-top: 4rem;
+
+}
+.item-price {
+    display: flex;
+    gap: 1rem;
+    padding:  .6rem 0;
+}
+
+.goto {
+    background-color: #053674;
+    padding: .8rem 1.2rem;
+    margin: 0 auto;
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6rem;
+    border-radius: .3rem;
+}
+
+.goto p {
+    display: flex;
+    color: #fff;
+    gap: 1rem;
+}
+
+.goto-arrw {
+    height: 3vh;
+    
+}
+
+.rating-stars img {
+    height: 4vh;
+}
+
+.see-more {
+    display: flex;
+    justify-content: end;
+    padding: 3rem 3rem;
+    margin-top: -4rem;
+}
+.see-more img {
+    height: 3.5vh;
+    filter: brightness(0);
+}
+.see-more p {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+ul  li {
+    list-style-type: none;
+    
+}
+
+/* Pre Footer Section */
+.pre-footer {
+    display: grid;
+    grid-template-areas: 
+        "footer1 footer2 footer3 footer4";
+    gap: .5rem;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 100%;
+    line-height: 2.8rem;
+    padding: 2rem 0;
+}
+
+ .pre-footer h3 {
+    margin: 1rem 0;
+}
+
+.HR {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+    margin-bottom: -6rem;
+    // margin-top: 2rem;
+}
+
+/* FOOTER */
+.footer-wrapper {
+    background: #E5EBF3;
+    // position: fixed;
+    // bottom: 0;
+    // width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3.5em 0;
+    bottom: 0;
+}
+
+footer p {
+    font-size: smaller;
+    bottom: 0;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -6rem;
+    
+}
+
