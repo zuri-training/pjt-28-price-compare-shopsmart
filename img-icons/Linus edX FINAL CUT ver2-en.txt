@@ -1,0 +1,13 @@
+Hey, welcome! I'm Linus Torvalds and I started Linux in 1991.
+And I welcome you to "Introduction to Linux" course and hope that you will get as much joy out of it as I have gotten over the years.
+One of the more interesting parts about Linux is how it turns out in the most unexpected places.
+So, when I started Linux, I needed an operating system for my own use, and today you find Linux everywhere...
+in small embedded devices, supercomputers, and that is kind of interesting,
+how this technology allows you to expand into many different niches.
+The thing that makes Linux interesting to me is all the interesting technology, but it's also all the people involved,
+and working in open source projects, where you work with hundreds, potentially thousands of people,
+it makes the whole technology even more interesting.
+Hopefully, this turns into an opportunity for you to find something you find really interesting to do,
+and one of the nice things about Linux and open source in general is that there's a lot of different things,
+and everybody has something they can give to the project.
+Thank you for considering this course and have fun!
