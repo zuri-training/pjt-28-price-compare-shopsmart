@@ -1,0 +1,282 @@
+
+/* SEETTING MARGIN AND PADDING */
+html, body {
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+nav {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lnks {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    list-style: none;
+}
+
+.first-logo {
+    height: 9vh;
+}
+
+.second-logo {
+    display: flex;
+    margin-left: 47rem;
+    height: 8.5vh;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: .3em 2em;
+    text-align: justify;
+    background-color: #053674;
+    color: #ffff;
+    border-radius: .2rem;
+}
+
+
+h5 {
+    background-color: #053674;
+    color: #fdfdfd;
+    padding: .6em 2em;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align :left; 
+    margin-top: 2.5rem;
+}
+
+form.form label {
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    text-align :left;
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+}
+
+button#login {
+    background: #053674;
+    color: #fdfdfd;
+
+}
+
+button {
+    width: 100%;
+    border: none;
+    padding: .8em 1em;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+button#logwith {
+    background: #fff;
+    color: #053674;
+    border: 2px solid #053674;
+}
+
+button#logwith a {
+    color: #053674;
+}
+
+button a:hover {
+    color: #000;
+}
+
+
+/* FORM-SECTION */
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 35%;
+    max-height: 35%;
+    background-color: #fff;
+    padding: 2.5em 1em;
+    gap: .8em;
+    margin-bottom: 5em;
+}
+
+
+form.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: -3em;
+    margin: 0 auto;
+}
+
+form > a {
+    color: #F6CC5C;
+     
+}
+
+#psswrd {
+    margin-top: .5em;
+}
+
+#login {
+    margin-top: .5em;
+}
+
+input {
+    width: 95%;
+    border-radius: 5px;
+    font-size: 1em;
+    border: 2px solid rgb(216, 213, 213);
+    padding: .8em 0.8em;
+    margin: .5em auto;
+}
+
+
+/* HORIZONTAL-LINE  Styling*/
+.horizon-line {
+    background-color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+#LH {
+    position: relative;
+    background-color: black;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: .2em;
+    height: .1rem;
+}
+
+#LH-P {
+    position: absolute;
+    top: 78.2%;
+    left: 48%;
+    padding: 0 .7em;
+    background-color: #fff;
+    color: #F6CC5C;
+}
+ 
+ 
+
+
+.sign-up {
+    display: flex;
+    justify-content: end;
+    padding: 0 1em;
+    font-size: small;
+    color: #F6CC5C;
+    
+}
+
+
+
+/* MOBILE-VIEW  media query*/
+@media screen and (max-width: 600px) {
+    
+    .form-wrapper {
+        max-width: 90%;
+        max-height: 90%;
+        margin: 0 auto;
+        padding: 1em 0;
+        margin-bottom: 5em;
+    }
+
+    form.form {
+        max-width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 1em 0;
+    }
+
+    label {
+        text-align: center;
+        margin-left: .4em;
+    }
+    
+    
+    input {
+        width: 85%;
+        border-radius: 5px;
+        font-size: 1em;
+        padding: .8em .6em;
+    }
+    
+    .horizon-line {
+        display: inline-block;
+        max-width: 100%;
+        text-align: center;
+        padding: .8em 0;
+        margin-top: -1em;
+    }
+    
+    #LH {
+        display: inline-block;
+        background-color: black;
+        width: 86%;
+        margin: 0 auto;
+
+    }
+     
+
+    #LH-P {
+        position: absolute;
+        top: 101.8%;
+        left: 43%;
+        padding: 0 .6em;
+        background-color: #ffff;
+        color: #000;
+    }
+
+/* style for all buttons */ 
+    button {
+        width: 94%;
+        white-space: wrap;
+        border: none;
+        padding: .6em 1em;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+
+    button a {
+        text-decoration: none;
+    }
+}

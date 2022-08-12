@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale= 0">
+    <title>Latest Edition</title>
+    <link rel="stylesheet" href="Latest-Edition.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,900&display=swap"
+        rel="stylesheet">
+    <!--importing font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="latest-edition.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="nav-links">
+        <a href="#" class="logo"><img src="/img-icons/logo.png" alt=""></a>
+        <a href="#" class="home">Home</a>
+        <a href="#" class="deals">Deals</a>
+        <a href="#" class="category">Categories</a>
+        <a href="#" class="store">Stores</a>
+        <a href="#" class="price">Price Tracker</a>
+        <a href="#" class="sign-up">
+            <span class="user-avatar-n-txt">
+
+                <img src="images/user-avatar.png" alt="">
+                 John Doe
+            </span>
+        </a>
+
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="what are you shopping for ?" class="search">
+
+
+
+        <div class="txt-icon">
+            <p class="search-txt">
+                Search
+            </p>
+
+            <img src="/img-icons/search-icon.svg" alt="">
+        </div>
+
+    </div>
+
+    <hr class="frst-hr">
+
+    <!-- MAIN SECTION -->
+    <main>
+        <!-- ASIDE SECTION -->
+        <div class="aside-wrapper">
+
+            <!-- CATEGORY-ASIDE -->
+            <aside class="categories">
+                <!-- <form> -->
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showCategoryCheckboxes()">
+                        <select>
+                            <option>All Categories</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+
+                    <div id="checkBoxes">
+                        <label for="mobile">
+                            <input type="checkbox" id="mobile" />
+                            Mobile
+                        </label>
+
+                        <label for="laptops">
+                            <input type="checkbox" id="laptop" />
+                            Laptops
+                        </label>
+                        <label for="tablets">
+                            <input type="checkbox" id="tablets" />
+                            Tablets
+                        </label>
+                        <label for="mobile-accessories">
+                            <input type="checkbox" id="mobile-accessories" />
+                            Mobile Accessories
+                        </label>
+                        <label for="smart-watches">
+                            <input type="checkbox" id="smart-watches" />
+                            Smart Watches
+                        </label>
+
+
+                    </div>
+                </div>
+                <!-- </form> -->
+
+
+            </aside>
+
+            <!-- BRANDS ASIDE -->
+            <aside class="brands">
+
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showBrandsCheckboxes()">
+                        <select>
+                            <option>Brands</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+
+                    <div id="brandsCheckBoxes">
+                        <label for="Tecno">
+                            <input type="checkbox" id="tecno" />
+                            Tecno
+                        </label>
+
+                        <label for="Apple">
+                            <input type="checkbox" id="apple" />
+                            Apple
+                        </label>
+                        <label for="Samsung">
+                            <input type="checkbox" id="samsung" />
+                            Samsung
+                        </label>
+                        <label for="hp">
+                            <input type="checkbox" id="hp" />
+                            HP
+                        </label>
+                        <label for="lenovo">
+                            <input type="checkbox" id="lenovo" />
+                            Lenovo
+                        </label>
+                        <label for="nokia">
+                            <input type="checkbox" id="nokia" />
+                            Nokia
+                        </label>
+                        <label for="infinix">
+                            <input type="checkbox" id="infinix" />
+                            Infinix
+                        </label>
+
+
+                    </div>
+                </div>
+
+
+
+            </aside>
+
+            <!-- PRICE RANGE -->
+            <aside class="price-range">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showPriceRangeCheckboxes()">
+                        <select>
+                            <option>Price <span>&#8358</span></option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="priceRangeCheckBoxes">
+                        <label for="show-out-of-stock">
+                            <input type="checkbox" id="tecno" />
+                            Show out of stock
+                        </label>
+            
+                        <label for="price-drop">
+                            <input type="checkbox" id="price-drop" />
+                            price drop
+                        </label>
+                        <label for="show-smart-price">
+                            <input type="checkbox" id="shop-smart-price" />
+                            Shop smart price
+                        </label>
+                    
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- BAND WIDTH -->
+            <aside class="band-width">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showBandWidthCheckboxes()">
+                        <select>
+                            <option>Band width</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="bandWidthCheckBoxes">
+                        <label for="lte">
+                            <input type="checkbox" id="lte" />
+                            LTE
+                        </label>
+            
+                        <label for="5g">
+                            <input type="checkbox" id="5g" />
+                            5G
+                        </label>
+                        <label for="3g">
+                            <input type="checkbox" id="3g" />
+                            3G
+                        </label>
+            
+                    </div>
+
+
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- CAPACITY ROM -->
+            <aside class="capacity-rom">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showCapacityRomCheckboxes()">
+                        <select>
+                            <option>Capacity ROM</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="capacityRomCheckBoxes">
+                        <label for="16g">
+                            <input type="checkbox" id="16g" />
+                            16 GB
+                        </label>
+            
+                        <label for="32g">
+                            <input type="checkbox" id="32g" />
+                            32 GB
+                        </label>
+                        <label for="128">
+                            <input type="checkbox" id="128g" />
+                            128 GB
+                        </label>
+                        <label for="512g">
+                            <input type="checkbox" id="512g" />
+                            512 GB
+                        </label>
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- Device RAM -->
+            <aside class="device-ram">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showDeviceRamCheckboxes()">
+                        <select>
+                            <option>Device RAM</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="deviceRamCheckBoxes">
+                        <label for="2g">
+                            <input type="checkbox" id="2g" />
+                            2 GB
+                        </label>
+            
+                        <label for="3g">
+                            <input type="checkbox" id="3g" />
+                            3 GB
+                        </label>
+                        <label for="4g">
+                            <input type="checkbox" id="4g" />
+                            4 GB
+                        </label>
+                        <label for="5g">
+                            <input type="checkbox" id="5g" />
+                            5 GB
+                        </label>
+                        <label for="6g">
+                            <input type="checkbox" id="6g" />
+                            6 GB
+                        </label>
+                        <label for="8g">
+                            <input type="checkbox" id="8g" />
+                            8 GB
+                        </label>
+                        <label for="12g">
+                            <input type="checkbox" id="12g" />
+                            12 GB
+                        </label>
+            
+            
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- ONLINE SHOP -->
+            <aside class="online-shop">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showOnlineShopCheckboxes()">
+                        <select>
+                            <option>Online Shop</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="onlineShopCheckBoxes">
+                        <label for="jumia">
+                            <input type="checkbox" id="jumia" />
+                            Jumia
+                        </label>
+            
+                        <label for="konga">
+                            <input type="checkbox" id="konga" />
+                            Konga
+                        </label>
+                        <label for="slot">
+                            <input type="checkbox" id="slot" />
+                            Slot
+                        </label>
+            
+                    </div>
+
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- SPECIAL FEATURES -->
+            <aside class="special-features">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showSpecialFeaturesCheckboxes()">
+                        <select>
+                            <option>Special Features</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="specialFeaturesbrandsCheckBoxes">
+                        <label for="touch-screen">
+                            <input type="checkbox" id="touch-screen" />
+                            Touch Screen
+                        </label>
+            
+                        <label for="flip-phone">
+                            <input type="checkbox" id="flip-phone" />
+                            Flip Phone
+                        </label>
+                        <label for="ext-memory-card">
+                            <input type="checkbox" id="ext-memory-card" />
+                            Ext. Memory Card
+                        </label>
+                        <label for="nfc">
+                            <input type="checkbox" id="nfc" />
+                            NFC
+                        </label>
+                        <label for="qwerty-keyboard">
+                            <input type="checkbox" id="qwerty-keyboard" />
+                            QWERTY Keyboard
+                        </label>
+            
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- COLOR -->
+            <aside class="colors">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showColorCheckboxes()">
+                        <select>
+                            <option>Color</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="colorsCheckBoxes">
+                        <label for="gold">
+                            <input type="checkbox" id="gold" />
+                            Gold
+                        </label>
+            
+                        <label for="black">
+                            <input type="checkbox" id="black" />
+                            Black
+                        </label>
+                        <label for="graphite">
+                            <input type="checkbox" id="graphite" />
+                            Graphite
+                        </label>
+                        <label for="blue">
+                            <input type="checkbox" id="blue" />
+                            Blue
+                        </label>
+                        <label for="grey">
+                            <input type="checkbox" id="grey" />
+                            Grey
+                        </label>
+                        <label for="white">
+                            <input type="checkbox" id="white" />
+                            White
+                        </label>
+                
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- CORE PROCESSOR -->
+            <aside class="core-processor">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showCoreProcessorCheckboxes()">
+                        <select>
+                            <option>Core Processor</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="coreProcessorCheckBoxes">
+                        <label for="i5">
+                            <input type="checkbox" id="i5" />
+                            i5
+                        </label>
+            
+                        <label for="i7">
+                            <input type="checkbox" id="i7" />
+                            i7
+                        </label>
+            
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- DISPLAY SIZE -->
+            <aside class="display-size">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showDisplaySizeCheckboxes()">
+                        <select>
+                            <option>Display Size</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="displaySizeCheckBoxes">
+                        <label for="1-2inch">
+                            <input type="checkbox" id="1-2inch" />
+                            1-2 inches
+                        </label>
+            
+                        <label for="2-3inch">
+                            <input type="checkbox" id="2-3nch" />
+                            2-3 inches
+                        </label>
+                        <label for="3-4inches">
+                            <input type="checkbox" id="3-4inches" />
+                            3-4 inches
+                        </label>
+                        <label for="4-5inches">
+                            <input type="checkbox" id="4-5inches" />
+                            4-5 inches
+                        </label>
+                        <label for="5-6inches">
+                            <input type="checkbox" id="5-6nches" />
+                            5-6 inches
+                        </label>
+                    
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- OS -->
+            <aside class="os">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showOsCheckboxes()">
+                        <select>
+                            <option>OS</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="osCheckBoxes">
+                        <label for="andriod">
+                            <input type="checkbox" id="andriod" />
+                            Andriod
+                        </label>
+            
+                        <label for="apple-ios">
+                            <input type="checkbox" id="apple-ios" />
+                            Apple IOS
+                        </label>
+                        <label for="Blackberry-os">
+                            <input type="checkbox" id="blackberry-os" />
+                            Blackberry OS
+                        </label>
+                        <label for="nokia">
+                            <input type="checkbox" id="nokia" />
+                            Nokia
+                        </label>
+                        <label for="Windows">
+                            <input type="checkbox" id="windows" />
+                            Windows
+                        </label>
+        
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+            <!-- SIMCARD SLOT -->
+            <aside class="simcard-slot">
+            
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="showSimcardSlotCheckboxes()">
+                        <select>
+                            <option>Simcard Slot</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+            
+                    <div id="simcardSlotCheckBoxes">
+                        <label for="singlesim">
+                            <input type="checkbox" id="single-sim" />
+                            Single Sim
+                        </label>
+            
+                        <label for="dual-sim">
+                            <input type="checkbox" id="dual-sim" />
+                            Dual Sim
+                        </label>
+                        
+                    </div>
+                </div>
+            
+            
+            
+            </aside>
+
+
+        </div>
+
+
+        <!-- SECTION -->
+        <div class="section-wrapper">
+            <h1>
+                Latest  Edition
+            </h1>
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/apple-12-pro.png" alt="">
+                </div>
+
+                <div class="item-description">
+                    <h4>
+                        Apple iPhone 12 Pro - 128GB
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Apple
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+
+                    <div class="item-price">
+                        SLOT - <span>&#8358 550,000</span>
+                        <span class="goto slot-price" >
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 550,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt=""  class="goto-arrw">
+                                </p>
+                            </a>
+                            
+                        </span>
+                    </div>
+                    
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/apple-11-pro.png" alt="">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Apple iPhone 11 Pro - 258GB
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Apple
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 480,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 495,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+            
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/lenovo-idealpad-graycolor.png" alt="" style="margin-left: 2rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Lenovo Ideapad Intel Celeron 1TB HDD 8GB RAM Win 10+
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Lenovo
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 127,300</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 190,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/hp-15-intel.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Hp 15 Intel Celeron N4020 8GB RAM 1TB HDD Windows 10
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - HP
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 211,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 215,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/samsung-galaxy-s22plus.png" alt="" >
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Samsung Galaxy S22 Plus
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Samsung
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 2545,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 640,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/hp-intel-pentium-quad-core.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Hp Intel Pentium Quad Core 8GB RAM - Fingerprint <br>
+                        reader - 1TB HDD
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - HP
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 235,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 258,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/itel14-(HD)-intel.png" alt="">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        itel 14” (HD) Intel® Celeron™ N3350 (Quad Core), 4GB  <br>
+                        RAM 1TB Hard Disk Able 1 Notebook Laptop
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Samsung
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 195,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 184,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/apple-iphone-xs-max.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Apple iPhone XS Max - 256GB - ROM - 4GB
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Apple
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 290,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 310,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/samsung-note20-ultra.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Samsung Galaxy Note 20 Ultra - 6.9 128GB - ROM - 12GB - RAM 
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Samsung
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 450,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 550,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/lenovo-idealpad-15.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Lenovo IDEAPAD 15 - 16BG RAM CORE i3 - 1TB HDD - WINS <br>
+                        10 PRO + Mouse
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Lenovo
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 499,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 550,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/dell-vostro-11th-gen.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                       DELL Vostro 14 11th Gen - intel Core i3 1TB HDD 4GB RAM <br>
+                        Win 10
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Dell
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 255,200</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 232,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/samsung-galaxy-s22.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Samsung Galaxy S22
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Samsung
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 499,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 550,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/dell-vostro-15-intel.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        DELL Vostro 15 - Intel Core i5 1TB HDD 8GB RAM win 10 Pro <br>
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Dell
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 385,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 389,000</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gray-Star.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <div class="imge-column">
+                    <img src="images/macbook-pro-13.3.png" alt="" style="margin-left: 4rem;">
+                </div>
+            
+                <div class="item-description">
+                    <h4>
+                        Apple MacBook Pro - 13.3" - 256GB - 8cores - Silver - M2 - <br>
+                        2022
+                    </h4>
+                    <h6>
+                        <a href="#">
+                            Brand - Apple
+                        </a>
+                    </h6>
+                    <p>
+                        compared online stores
+                    </p>
+            
+                    <div class="item-price">
+                        SLOT - <span>&#8358 2,900,000</span>
+                        <span class="goto slot-price">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        Jumia - <span>&#8358 2,545,999</span>
+                        <span class="goto">
+                            <a href="#">
+                                <p class=""> Go to store
+                                    <img src="images/fwd-arrow.png" alt="" class="goto-arrw">
+                                </p>
+                            </a>
+            
+                        </span>
+                    </div>
+            
+                    <div class="rating-stars">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                        <img src="/img-icons/gold-star.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="see-more">
+                <a href="#">
+                    <p>
+                        See more <img src="images/fwd-arrow.png" alt="">
+                    </p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <div class="footer-wrapper">
+    <div class="pre-footer">
+        <div class="footer-col1">
+            <ul>
+                <h3>
+                    Categories
+                </h3>
+                <li>
+                    <a href="#">Mobiles</a>
+                </li>
+                <li>
+                    <a href="#">Laptops</a>
+                </li>
+                <li>
+                    <a href="#">Tablets</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+                <li>
+                    <a href="#">Appliances</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="footer-col2">
+            <ul>
+                <h3>
+                    Brands
+                </h3>
+                <li>
+                    <a href="#">Apple</a>
+                </li>
+                <li>
+                    <a href="#">Samsung</a>
+                </li>
+                <li>
+                    <a href="#">Tecno</a>
+                </li>
+                <li>
+                    <a href="#">Infinix</a>
+                </li>
+                <li>
+                    <a href="#">Nokia</a>
+                </li>
+                <li>
+                    <a href="#">HP</a>
+                </li>
+                <li>
+                    <a href="#">Lenovo</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="footer-col3">
+            <ul>
+                <h3>
+                    Site
+                </h3>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="#">Team</a>
+                </li>
+                <li>
+                    <a href="#">Merchant Sign up</a>
+                </li>
+                <li>
+                    <a href="#">User Guide</a>
+                </li>
+                <li>
+                    <a href="#">User Guide</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col4">
+            <ul>
+                <h3>
+                    Support
+                </h3>
+                <li>
+                    <a href="#">Contact us</a>
+                </li>
+                <li>
+                    <a href="#">Help Center</a>
+                </li>
+                <li>
+                    <a href="#">Merchant Sign up</a>
+                </li>
+                <li>
+                    <a href="#"> Reviews</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="HR">
+    <footer>
+        <div class="footer-copyright">
+            <p>&copy 2020 shopsmart.com. All Rights Reserved</p>
+        </div>
+
+    </footer>
+    </div>
+
+
+</body>
+
+</html>
