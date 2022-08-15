@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+    background-color: #efefef;
+}
+/*### CREATE FLEX NAV ROW ###*/
+.row {  
+  display: flex;
+  flex-flow: row wrap;
+    padding: 20px 20px 0 20px;
+}
+
+/* CREATE THREE COLUMN FOR NAV ROW */
+/* Left column */
+.left-column {
+  flex: 10%;
+    text-align: center;
+}
+
+/* Menu column */
+.menu-column {
+  flex: 70%;
+  background-color: white;
+}
+
+/* Right column */
+.right-column {
+  flex: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+li a {
+  display: block;
+  color: #000;
+  font-size: 12px;
+  padding: 5px 16px;
+  text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover {
+  color: #ddd;
+}
+
+    
+/*###  STYLE MENU SIGN-IN BUTTON  ###*/
+a.buttonn:link, a.buttonn:visited {
+background-color: #053573;
+color: white;
+padding: 5px 40px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+}
+
+/*###  STYLE MENU SEARCH  ###*/
+.search .search-container {
+  float: right;
+  padding: 0 35px 20px 20px;
+}
+
+.search:after {
+display: table;
+content: "";
+clear: both;
+    }
+    
+.search input[type=text] {
+  padding: 6px 150px 6px 5px;
+  margin-top: 8px;
+  font-size: 14px;
+  border-radius:5px 0 0 5px;
+  border: 1px solid #000;
+  border-right: none;
+  height: 30px;
+  margin-right: -10px;
+}
+
+.search textarea:focus, input:focus{
+    outline: none;
+}
+
+::placeholder {
+  font-size: 12px;
+}    
+
+.search .search-container button {
+  padding: 9px 10px 9px 10px;
+  margin-top: px;
+  background: #dcdc00;
+  font-size: 11px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #000;
+  cursor: pointer;
+  color:#000;
+  height: 30px;
+  margin-left: 0;
+  border-left: none;
+}
+  
+
+/*#### CENTER DIV USING FLEX BOX ####*/
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
+}
+
+
+/*#### STYLE INNER CONTAINERS ####*/
+div.white-container {
+padding: 20px 0px 0;
+background-color: #fff;
+display: inline-block;
+width: 70%;
+}
+.blue {
+    background-color: #053573;
+    color: white;
+    padding-left: 20px;
+}
+.content-container {
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.left-box {
+    flex: 30%;
+}
+.right-box {
+    flex: 70%;
+}
+.right-box-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+input[type=checkbox] {
+    margin-bottom: 20px;
+}
+.back {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50px;
+}
+.back:hover {
+  background-color: blue;
+  color: #fff;
+  border-color: blue;
+}
+.go {
+  padding: 10px 20px;
+  background-color: blue;
+  border: 1px solid blue;
+  border-radius: 50px;
+  float: right;
+    color: #fff;
+}
+.go:hover {
+  background-color: #FFF;
+  color: #000;
+  border-color: #000;
+}
+p.question {
+    margin-top: 50px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/*### STYLE FOOTER SECTION ###*/
+.footer-col {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5rem;
+  justify-content: center;
+  padding: 50px 0;
+  font-size: 12.5px;
+  background-color: #efeffe;
+    }
+    
+    .last-row {
+    border-top:1px solid #000;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+    }
+h4 {
+    color: #053573;
+}
+
+/*####  MOBILE RESPONSIVE DESIGN  ####*/
+@media screen and (max-width: 700px) {
+.search-container {
+  padding: 20px;
+}
+.content-container {
+    padding: 20px;
+}
+.search input[type=text] {
+  padding: 6px 35px 6px 5px;
+}
+.search-container {
+        text-align: center; 
+    }   
+.search .search-container {
+  float: none;
+}
+
+div.white-container {
+padding: 0px;
+background-color: #fff;
+display: inline-block;
+width: 100%;
+}
+.left-box, .left-column, .menu-column {
+    flex: 100%;
+}
+.left-right {
+    flex: 100%;
+}
+.go {
+  margin-top: 20px;
+}
+.stop-float {
+content: "";
+display: table;
+clear: both;
+}
+}

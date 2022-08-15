@@ -1,6 +1,4 @@
-from multiprocessing.sharedctypes import Value
 from django.shortcuts import redirect, render
-from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -16,6 +14,12 @@ from . tokens import generate_token
 def home(request):
     return render(request, "authenticate/index.html")
 
+def about(request):
+    return render(request, "about.html")
+
+def contact(request):
+    return render(request, "contact.html")
+
 def signup(request):
 
     if request.method == "POST":
@@ -25,15 +29,11 @@ def signup(request):
         pass2 = request.POST["pass2"]
 
         if pass1 == pass2:
-            if User.objects.filter(username).exists():
-                messages.error(request, "Username already exists")
-                return redirect("signup")
-            elif User.objects.filter(email=email).exists():
+            if User.objects.filter(email=email).exists():
                 messages.error(request, "Email already exists")
                 return redirect("signup")
             else:
                 user = User.objects.create_user(username, email, pass1)
-                user.name = username
                 user.is_active = False
                 user.save()
                 messages.success(request, "User created successfully. We have sent you an email with a link to verify your account.")
@@ -41,7 +41,7 @@ def signup(request):
                 # Welcome Email
 
                 subject = "Welcome to SmartShop"
-                message = "Hello" + user.name + "!! \n" + "Welcome to SmartShop!! \n \n" + "We hope you enjoy your shopping experience with us!! \n \n" + "We have also sent you a confirmation email, please confirm your email address to activate your account." + "Regards, \n" + "SmartShop Team"
+                message = "Hello" + username + "!! \n" + "Welcome to SmartShop!! \n \n" + "We hope you enjoy your shopping experience with us!! \n \n" + "We have also sent you a confirmation email, please confirm your email address to activate your account." + "Regards, \n" + "SmartShop Team"
                 from_email = settings.EMAIL_HOST_USER
                 to_list = [user.email]
                 send_mail(subject, message, from_email, to_list, fail_silently=True)
@@ -82,7 +82,7 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            name = user.name
+            name = username
             messages.success(request, "Login successful")
             return render(request, "authenticate/index.html", {'name': name})
         else:

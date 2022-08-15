@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b20a86ad5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="page-cover">
+    <!-- #### CREATE NAV SECTION AND SPLIT INTO COLUMNS #### -->
+        <div class="white-bg">
+            <div class="row">
+                <div class="left-column">
+                    <img src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/singup-update/Frame%202495.png" width="50">
+                </div>
+                <div class="menu-column">
+                    <nav>
+                        <ul>
+                          <li><a class="active" href="/home">Home</a></li>
+                          <li><a href="#">Deals</a></li>
+                          <li><a href="#">Categories</a></li>
+                          <li><a href="#">Stores</a></li>
+                          <li><a href="#">Price Tracker</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                {% if user.is_authenticated %}
+                <div class="right-column">
+                    <a href="/signout" class="button">Sign Out</a>
+                </div>
+                {% else %}
+                <div class="right-column">
+                    <a class="button" href="/signin">Sign In</a>
+                </div>
+                {% endif %}
+            </div>
+             <!-- #### SEARCH FORM #### -->
+            <div class="search">
+                   <div class="search-container">
+                         <form action="/products/search" method="post">
+                             {% csrf_token %}
+                             <input type="text" placeholder="what are you searching for?" id="search" name="search">
+                            <button type="submit">Search <i class="fa fa-search"></i></button>
+                        </form>
+
+                    </div>
+            </div>
+             <!-- #### CONTENT SECTION #### -->
+            <div class="about-content">
+                <h2 class="title">About Us</h2>
+                <p class="content-para">It's only best to make decisions when you have all necessary information at hand. We are dedicated to making your decision process easy and stress free. We are ranked one of the best Price Comparison Services, hence best believe we only give top notch, reliable Services.
+                </p>
+                <h2 class="title">Finding your Right Product</h2>
+                <p class="">We care about getting you your right product and that's why we have gathered great amount of information on selected products. Our search tool will help you find your right product and enable you shop smartly.<br>
+                Also included:
+                <ul>
+                <li><i class="fa-solid fa-check"></i>Wide range of Mobile, Laptops gadgets and accessories etc</li>
+                <li><i class="fa-solid fa-check"></i>See what's trending around you</li>
+                <li><i class="fa-solid fa-check"></i>Access product reviews</li>
+                </ul></p>
+                <h2 class="title content-unique">Getting your Best Brand</h2>
+                <p class="content-para">At Shop Smart, we don't just have your best products, we have your most preferred brands on display. We understand there are just certain brands you trust as everyone has their preference, so we have collated data from your best brands, all you need it's to go ahead and shop smart.</p>
+                <h2 class="title">Finding Your Right Price</h2>
+                <p class="content-para">While we provide you with the best products from your favorite brands, we wouldn't want you to buy any product more than what is necessary; so we have a wide range of various Vendors price Selection over any Product.</p>
+
+            </div>
+    <!-- #### DOWNLOAD MOBILE APP #### -->
+            <!-- <div class="row download">
+                <div class="right-content">
+                <h2 class="title">Download Our Mobile App</h2>
+                        <p class="content-para">Download our mobile app and reach us with ease anywhere you are. It also has an effective bar code scanner that you can use in physical stores to know price of product you see but need price comparison.<br><br><img src="Group%2039628.png" width="200px"></p>
+                </div>
+                <div class="mobile-image">
+                    <img src="Group%2039635.png" width="150px">
+                </div>
+            </div> -->
+             <!-- #### CREATE NEWSLETTER UPDATE SECTION #### -->
+            <div class="update-cover">
+                <div class="update"><h3>Get update on Deals and Prices</h3>
+                    <p style="font-size: 12px;">Receive Updates and others you would actually be interested in.<br>Unsubscribe any time
+                    </p>
+                    <form class="example" action="">
+                      <input type="text" placeholder="Your email.." name="email">
+                      <button type="submit">Subscribe</button>
+                    </form>
+                </div> 
+            </div> 
+        
+             <!--  #### CREATE FOOTER ####  -->
+            <footer class="footer-col">
+                <div>
+                    <h4>Categories</h4><br>
+                    Mobiles <br>
+                    Laptops<br>
+                    Tablets <br> 
+                    Accessories<br>
+                    Appliances <br>
+                </div>
+                <div>
+                    <h4>Brands</h4><br>
+                    Apple<br>
+                    Samsung<br>
+                    Tecno<br>
+                    Infinix<br>
+                    Nokia<br>
+                    Hp<br>
+                    Lenovo<br>
+                </div>
+                <div>
+                    <h4>Site</h4><br>
+                    <a href="/about" class="custom-link">About us</a><br>
+                    Team<br>
+                    <!-- Merchant sign up<br> -->
+                    User Guide<br>
+                </div>
+                <div>
+                    <h4>Support</h4><br>
+                    Contact Us<br>
+                    Help Center<br>
+                    <!-- Merchant Sign Up<br> -->
+                    Reviews<br>
+                    Privacy Policy
+                </div>
+                <div class="last-row">
+                    (c) 2022 Shopsmart.com. All Rights Reserved
+                </div>
+            </footer>
+        </div>
+    </div>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+        body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #efefef;
+        padding: 0;
+        }
+        .custom-link{
+            text-decoration: none;
+            color: inherit;
+        }
+        .white-bg {
+            background-color: #fff;
+            width: 70%;
+            margin: auto;
+            }
+            
+        /*### CREATE FLEX NAV ROW ###*/
+        .row {  
+        display: flex;
+        flex-flow: row wrap;
+            padding: 20px 20px 0 20px;
+        }
+
+        /* CREATE THREE COLUMN FOR NAV ROW */
+        /* Left column */
+        .left-column {
+        flex: 10%;
+            text-align: center;
+        }
+
+        /* Menu column */
+        .menu-column {
+        flex: 70%;
+        background-color: white;
+        }
+
+
+        /* Right column */
+        .right-column {
+        flex: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        }
+
+        li a {
+        display: block;
+        color: #000;
+        font-size: 12px;
+        padding: 5px 16px;
+        text-decoration: none;
+            font-weight: bold;
+        }
+
+        li a:hover {
+        color: #ddd;
+        }
+
+            
+        /*###  STYLE MENU SIGN-IN BUTTON  ###*/
+        a.button:link, a.button:visited {
+        background-color: #053573;
+        color: white;
+        padding: 5px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        }
+
+        /*###  STYLE MENU SEARCH  ###*/
+        .search .search-container {
+        float: right;
+        padding: 0 20px 20px 20px;
+        }
+
+        .search:after {
+        display: table;
+        content: "";
+        clear: both;
+            }
+            
+        .search input[type=text] {
+        padding: 6px 150px 6px 5px;
+        margin-top: 8px;
+        font-size: 14px;
+        border-radius:5px 0 0 5px;
+        border: 1px solid #000;
+        border-right: none;
+        height: 30px;
+        margin-right: -10px;
+        }
+
+        .search textarea:focus, input:focus{
+            outline: none;
+        }
+
+        ::placeholder {
+        font-size: 12px;
+        }    
+
+        .search .search-container button {
+        padding: 9px 10px 9px 10px;
+        margin-top: px;
+        background: #f1f1f1;
+        font-size: 11px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid #000;
+        cursor: pointer;
+        color:#000;
+        height: 30px;
+        margin-left: 0;
+        border-left: none;
+        }
+        
+        /*### STYLE CONTENT SECTION ###*/  
+        .about-content, .download {
+            padding: 0px 50px;
+            }
+            
+        .title {
+        color: #053573;  
+        font-size: 30px;
+            }
+        .content-unique {
+            margin-top: 80px;
+            }
+        .content-para {
+            margin-bottom: 80px;
+            }
+        ul {
+        list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        i {
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        /*#### STYLE DOWNLOAD APP ROW ####*/
+        /* Left column */
+        .right-content {
+        flex: 70%;
+        }
+
+        /* Menu column */
+        .mobile-image {
+        flex: 30%;
+        text-align: center;
+        }
+
+        /*### NEWSLETTER UPDATE FORM ###*/
+        .update-cover {
+            background-color: moccasin;
+            padding: 20px;
+            margin-top: 20px;
+            
+        }
+        .update {
+            width: 70%;
+            margin: auto;
+            background-color: moccasin;
+            text-align: center;
+            }
+
+            
+        form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: none;
+        width: 60%;
+        background: #fff;
+        margin-right: 5px;
+        }
+
+        form.example button {
+        width: auto;
+        padding: 10px;
+        background: #053573;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+        }
+
+        form.example button:hover {
+        background: #0b7dda;
+        }
+
+        form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+
+            
+            
+        /*### STYLE FOOTER SECTION ###*/
+        .footer-col {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 5rem;
+        justify-content: center;
+        padding: 50px 0;
+        font-size: 12.5px;
+        background-color: #efeffe;
+            }
+            
+            .last-row {
+            border-top:1px solid #000;
+                width: 100%;
+                text-align: center;
+                padding: 20px;
+                font-size: 12px;
+            }
+        h4 {
+            color: #053573;
+        }
+
+        /* Responsive layout WITH FLEX - when the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 775px) {
+        /*###  AJUST ROW ON MOBILE  ###*/  
+        .row {  
+        display: flex;
+        flex-flow: column;
+        }
+        /*###  STYLE MENU SEARCH  ###*/
+        .search .search-container {
+        float: none;
+        width: 85%;
+        margin: auto;
+        }
+        .search input[type=text] {
+        padding: 20px;
+        }
+        /*###  WHITE CONTENT BOX  ###*/
+        .white-bg {
+            background-color: #fff;
+            width: auto;
+            }
+        /*###  STYLE MENU SEARCH  ###*/   
+        .search input[type=text] {
+        padding: 9px 5px 5px 5px;
+        margin-top: 15px;
+        font-size: 14px;
+        border-radius:  0;
+        border: 1px solid #efefef;
+        height: 30px;
+        }
+
+        ::placeholder {
+        font-size: 12px;
+        }    
+
+        .search .search-container button {
+        padding: 9px 5px 9px 5px;
+        background: #000;
+        font-size: 11px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid #efefef;
+        cursor: pointer;
+        color:aliceblue;
+        height: 30px;
+        }
+            .update {
+            width: 99%;
+            }
+
+        /*### NEWSLETTER UPDATE FORM ###*/
+        form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        background: #f1f1f1;
+            width: 100%;
+        }
+
+        form.example button {
+        width: 100%;
+        padding: 10px;
+        background: #000;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+        }
+
+        }
+    </style>
+</body>
+</html>

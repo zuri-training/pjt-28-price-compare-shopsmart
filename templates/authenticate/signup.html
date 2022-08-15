@@ -1,42 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartShop</title>
-</head>
-<body>
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissable fade show" role="alert">
-        <strong>Message:</strong> {{ message }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    {% endfor %}
-    
-    <h3>Sign Up</h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="one">
+        <div class="headernav">
+          <div class="logodiv">
+            <img
+              class="imglogo"
+              width="230px"
+              alt="logo"
+              src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/singup-update/Frame%202495.png"
+            />
+            <span>Shop smart at the right price</span>
+          </div>
+          <div class="navlist">
+            <a class="active" href="/">Home</a>
+            <a href="#">Deal</a>
+            <a href="#">Categories</a>
+            <a href="#">Stores</a>
+            <a href="#">Price Tracker</a>
+          </div>
+          {% if user.is_authenticated %}
+          <div class="signup"><a href="/signin">Log In</a></div>
+          {% else %}
+          <div class="signup"><a href="/signup" style="color: #000000; text-decoration: none;">Sign Up</a></div>
+          {% endif %}
+        </div>
+        <div class="headersearch">
+          <form class="searchbar" action="/products/search" method="post">
+            {%csrf_token%}
+            <input
+              class="place"
+              type="search"
+              placeholder="what are you shopping for?"
+              name="search"
+              id="search"
+            />
+            <button type="submit">search<i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="reg">
+        <p>Register User</p>
+      </div>
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissable fade show" role="alert" style="position: absolute;">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+      <div class="container">
+        <form action="/signup" method="post">
+        {% csrf_token %}
+          <table class="tablemain">
+              <div class="name">
+                <thead>
+                  Name
+                </thead>
+                <br />
+                <tr>
+                  <input type="text" id="username" name="username" placeholder="E.g John Doe" required />
+                </tr>
+              </div>
+              <div class="mail">
+                <thead>
+                  Email
+                </thead>
+                <br />
+                <tr>
+                  <input
+                    type="email"
+                    placeholder="E.g JohnDoe@gmail.com"
+                    id="email" name="email"
+                    required
+                  />
+                </tr>
+              </div>
+              <div class="pass">
+                <thead>
+                  Password
+                </thead>
+                <br />
+                <tr>
+                  <input type="password" id="pass1" name="pass1" placeholder="E.g JohnDoe67" required />
+                </tr>
+              </div>
+              <div class="pass">
+                <thead>
+                  Repeat Password
+                </thead>
+                <br />
+                <tr>
+                  <input type="password" id="pass2" name="pass2" placeholder="JohnDoe67" required />
+                </tr>
+              </div>
+              <div>
+                <tr>
+                  <button class="regs" type="submit">Register</button>
+                </tr>
+              </div>
+            </div>
+            <!-- <div>
+              <fieldset class="title">
+                <legend>OR</legend>
+              </fieldset>
+            </div>
+            <div>
+              <tr>
+                <button class="google" type="submit">
+                  Continue with Google
+                </button>
+              </tr>
+            </div>
+            <div>
+              <tr>
+                <button class="face" type="submit">
+                  Continue with Facebook
+                </button>
+              </tr>
+            </div>
 
-    <form action="/signup" method="post">
-    {% csrf_token %}
-        <label for="">Username</label>
-        <input type="text" id="username" name="username" placeholder="John Doe" required>
-        <br>
+            <div>
+              <tr>
+                <button class="twitt" type="submit">
+                  Continue with Twitter
+                </button>
+              </tr>
+            </div> -->
+          </table>
+        </form>
+        <div class="direct">
+            <footer>Already have an account <a href="/signin">login here</a></footer>
+        </div>
+      </div>
+    </main>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+        background: #ffffff;
+        }
+        main {
+        position: relative;
+        width: 100%;
+        background: #ffffff;
+        }
+        .navlist a{
+          text-decoration: none;
+          color: inherit;
+        }
+        .one {
+        /* Auto layout */
 
-        <label for="">Email</label>
-        <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
-        <br>
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 16px 48px;
+        gap: 16px;
 
-        <label for="">Password</label>
-        <input type="password" id="pass1" name="pass1" placeholder="Create a password" required>
-        <br>
+        position: absolute;
+        width: 100%;
+        height: 181.28px;
+        left: 0px;
+        top: 5px;
 
-        <label for="">Confirm Password</label>
-        <input type="password" id="pass2" name="pass2" placeholder="Confirm your password" required>
-        <br>
+        background: #ffffff;
+        /* Nav shadow */
 
-        <button type="submit">Sign Up</button>
-    </form>
-</body>
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .imglogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 4.59px;
+
+        width: 300px;
+        height: 69.21px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+
+        .headernav {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0px 2px 0px 0px; */
+        gap: 140px;
+
+        width: 90%;
+        height: 83.28px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+        .searchbar {
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 1px 0px 30px;
+        gap: 354px;
+
+        width: 730px;
+        height: 50px;
+
+        background: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 5px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        }
+        .logodiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 4.08px;
+
+        width: 127px;
+        height: 83.28px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+        .imglogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 4.59px;
+
+        width: 62px;
+        height: 69.21px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+        span {
+        width: 127px;
+        height: 10px;
+
+        font-family: "League Spartan";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10.6511px;
+        line-height: 10px;
+        /* identical to box height */
+
+        /* Gray/10x */
+
+        color: #404040;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        }
+        .navlist {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 60px;
+
+        width: 668px;
+        height: 28px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        }
+        .signup {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 15px;
+
+        width: 188px;
+        height: 39px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        }
+        .headersearch > input {
+        /* Body S */
+
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        color: rgba(170, 170, 170, 0.5);
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+
+        form.searchbar button {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 12px 9px 12px 20px;
+        gap: 16px;
+        width: 126px;
+        height: 48px;
+        margin-right: 0px;
+        /* Yellow - Opacity/YELLOW 75% */
+
+        background: rgba(246, 204, 92, 0.75);
+        border-radius: 0px 5px 5px 0px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        }
+        form.example input[type="text"] {
+        width: 219px;
+        height: 24px;
+
+        /* Body S */
+
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 4px;
+        /* identical to box height, or 150% */
+
+        display: flex;
+        align-items: center;
+        color: rgba(170, 170, 170, 0.5);
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+        .place [placeholder="what are you shopping for?"] {
+        width: 219px;
+        height: 24px;
+
+        /* Body S */
+
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        color: rgba(170, 170, 170, 0.5);
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+        .reg {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 20px 48px;
+        gap: 10px;
+
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        left: 0px;
+        top: 200px;
+        margin-bottom: 1097px;
+
+        /* Dark Blue/Main Primary color */
+
+        background: #053674;
+        }
+        .reg > p {
+        /* Heading 10 */
+
+        width: 211px;
+        height: 40px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 500;
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        }
+        .container {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        position: absolute;
+        width: 750px;
+        height: auto;
+        bottom: 198px;
+        top: 240px;
+        /* left: 345px; */
+        right: 340px;
+        margin-top: 20px;
+        }
+        table div {
+        width: 750px;
+        }
+        .container2 {
+        position: absolute;
+        height: 646px;
+        width: 750px;
+        height: 626px;
+        /* left: 345px; */
+        top: 240px;
+        padding: 0px;
+        gap: 15px;
+        }
+
+        fieldset.title {
+        background-position: 1px solid #0000;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        display: block;
+        text-align: center;
+        width: a;
+        }
+        fieldset.title legend {
+        padding: 5px 10px;
+        color: #f6cc5c;
+        }
+        .regs {
+        text-align: center;
+        padding: 15px 50px;
+        gap: 10px;
+        top: 86px;
+        width: 750px;
+        height: 70px;
+        color: #ffffff;
+        background: #053674;
+        border-radius: 4px;
+        margin-top: 16px;
+        }
+        .name {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 750px;
+        }
+        .mail {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        }
+        .pass {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        }
+        table.tablemain thead tr {
+        font-family: var(--poppins);
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+        font-style: normal;
+        color: #2b2b2b;
+
+        position: absolute;
+        left: 0.18%;
+        right: 87.95%;
+        top: 0%;
+        bottom: 68.99%;
+        }
+        .google {
+        background-color: #ffffff;
+        text-align: center;
+        border: 3px solid #053674;
+        width: 750px;
+        padding: 0px;
+        gap: 16px;
+        height: 70px;
+        color: #053674;
+        }
+        .face {
+        text-align: center;
+        padding: 15px 50px;
+        gap: 10px;
+        top: 86px;
+        width: 750px;
+        height: 70px;
+        background-color: #ffffff;
+        border: 3px solid #053674;
+        border-radius: 4px;
+        margin-top: 16px;
+        color: #053674;
+        }
+        .twitt {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 50px;
+        gap: 10px;
+        top: 86px;
+        width: 750px;
+        height: 70px;
+        background-color: #ffffff;
+        border: 3px solid #053674;
+        border-radius: 4px;
+        margin-top: 16px;
+        color: #053674;
+        }
+
+        .input {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        text-align: center;
+        color: black;
+        width: 750px;
+        padding: 15px 50px;
+        gap: 10px;
+        height: 70px;
+        top: 1.88px;
+        border: 2px solid #222424;
+        border-radius: 5px;
+        }
+
+        input {
+        background-color: white;
+        text-align: center;
+        color: black;
+        width: 750px;
+        padding: 0px;
+        gap: 16px;
+        height: 70px;
+        border: 2px solid #222424;
+        border-radius: 4px;
+        }
+
+        .direct {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+
+        /* position: absolute;
+        width: 750px;
+        height: 30px;
+        margin-bottom: 128px; */
+        /* margin-left: 525px; */
+        }
+
+        footer > a {
+        color: #f6cc5c;
+        }
+        input.place {
+        height: 40px;
+        border: none;
+        }
+    </style>
+  </body>
 </html>

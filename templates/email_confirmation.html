@@ -1,9 +1,285 @@
 {% autoescape off %}
-    Welcome to SmartShop
+<div class="content-container">
+    <h1>Verify your Email</h1>
+    <p class="intro">Hi {{ name }}, use the link below to verify your Email and start enjoying ShopSmart</p>
+    <a class="button" href="https://{{ domain }}{% url 'activate' uidb64=uid token=token%}">Verify Email</a>
+    <p>Or click this link: https://{{ domain }}{% url 'activate' uidb64=uid token=token%}</p>
+</div>
+    <!--  #### CREATE FOOTER ####  -->
+<footer class="footer-col">
+    <div>
+        <h4>Categories</h4><br>
+        Mobiles <br>
+        Laptops<br>
+        Tablets <br> 
+        Accessories<br>
+        Appliances <br>
+    </div>
+    <div>
+        <h4>Brands</h4><br>
+        Apple<br>
+        Samsung<br>
+        Tecno<br>
+        Infinix<br>
+        Nokia<br>
+        Hp<br>
+        Lenovo<br>
+    </div>
+    <div>
+        <h4>Site</h4><br>
+        About us<br>
+        Team<br>
+        Merchant sign up<br>
+        User Guide<br>
+        User Guide
+    </div>
+    <div>
+        <h4>Support</h4><br>
+        Contact Us<br>
+        Help Center<br>
+        Merchant Sign Up<br>
+        Reviews<br>
+        Privacy Policy
+    </div>
+    <div class="last-row">
+        (c) 2022 Shopsmart.com. All Rights Reserved
+    </div>
+</footer>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #efefef;
+    }
+    /*### CREATE FLEX NAV ROW ###*/
+    .row {  
+        display: flex;
+        flex-flow: row wrap;
+        padding: 20px 20px 0 20px;
+    }
 
-    Hello {{ name }}!
+    /* CREATE THREE COLUMN FOR NAV ROW */
+    /* Left column */
+    .left-column {
+        flex: 10%;
+        text-align: center;
+    }
 
-    Please confirm your email by clicking on the following link.
+    /* Menu column */
+    .menu-column {
+        flex: 70%;
+        background-color: white;
+    }
 
-    Confirmation Link: https://{{ domain }}{% url 'activate' uidb64=uid token=token%}
+    /* Right column */
+    .right-column {
+        flex: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    li a {
+        display: block;
+        color: #000;
+        font-size: 12px;
+        padding: 5px 16px;
+            text-decoration: none;
+        font-weight: bold;
+    }
+
+    li a:hover {
+        color: #ddd;
+    }
+
+        
+    /*###  STYLE MENU SIGN-IN BUTTON  ###*/
+    a.buttonn:link, a.buttonn:visited {
+        background-color: #053573;
+        color: white;
+        padding: 5px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+    }
+
+    /*###  STYLE MENU SEARCH  ###*/
+    .search .search-container {
+        float: right;
+        padding: 0 20px 20px 20px;
+    }
+
+    .search:after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+        
+    .search input[type=text] {
+        padding: 6px 150px 6px 5px;
+        margin-top: 8px;
+        font-size: 14px;
+        border-radius:5px 0 0 5px;
+        border: 1px solid #000;
+        border-right: none;
+        height: 30px;
+        margin-right: -10px;
+    }
+
+    .search textarea:focus, input:focus{
+        outline: none;
+    }
+
+    ::placeholder {
+        font-size: 12px;
+    }    
+
+    .search .search-container button {
+        padding: 9px 10px 9px 10px;
+        margin-top: px;
+        background: #f1f1f1;
+        font-size: 11px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid #000;
+        cursor: pointer;
+        color:#000;
+        height: 30px;
+        margin-left: 0;
+        border-left: none;
+    }
+    
+
+    /*#### CENTER DIV USING FLEX BOX ####*/
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #efefef;
+    }
+
+
+    /*#### STYLE INNER CONTAINERS ####*/
+    div.white-container {
+        padding: 20px 0px 0;
+        background-color: #fff;
+        display: inline-block;
+        width: 70%;
+    }
+    .blue {
+        background-color: #053573;
+        color: white;
+        padding-left: 20px;
+    }
+    .content-container {
+        padding: 100px 200px;
+    }
+
+
+    /*#### STYLE HEADING, INTRO AND EMAIL TEXT ####*/
+
+    h1 {
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    p.intro {
+        color: #464646;
+        margin-left: 15px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    p.email-us {
+        color: #706f6f;
+        margin-left: 20px;
+        font-size: 19px;
+        font-weight: 600;
+        margin-top: 50px;
+    }
+
+        
+    /*#### VERIFY BUTTON ####*/
+    a.button:link, a.button:visited {
+        background-color: #053573;
+        color: white;
+        padding: 15px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 30px;
+        min-width: 100%;
+        margin: 50px 10px 20px;
+    }
+
+    a.button:hover, a.button:active {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    /*#### EMAIL LINK ANCHOR ####*/
+    a.mail:link, a.mail:visited {
+        color: #b7b4b4;
+    }
+
+        
+        
+    /*### STYLE FOOTER SECTION ###*/
+    .footer-col {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 5rem;
+        justify-content: center;
+        padding: 50px 0;
+        font-size: 12.5px;
+        background-color: #efeffe;
+    }
+        
+    .last-row {
+        border-top:1px solid #000;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+    }
+    h4 {
+        color: #053573;
+    }
+
+
+@media screen and (max-width: 700px) {
+    p.intro {
+        margin-left: 0;
+    }
+    a.button:link, a.button:visited {
+        margin-left: 0;
+    }
+    p.email-us {
+        margin-left: 20px;
+    }
+    .content-container {
+        padding: 20px;
+    }
+    div.white-container {
+        padding: 0px;
+        background-color: #fff;
+        display: inline-block;
+        width: 100%;
+    }
+}
+</style>
 {% endautoescape %}

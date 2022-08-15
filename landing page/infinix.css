@@ -1,0 +1,1227 @@
+body{
+
+
+    background: #ffffff;
+    }
+    
+    
+    .white-bg {
+       background-color: #ffffff;
+       width: 100%;
+       height: 20%;
+       margin: auto;
+       padding: 20px;
+       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+       }
+       
+    /*### CREATE FLEX NAV ROW ###*/
+    .row {  
+     display: flex;
+     flex-flow: row wrap;
+    }
+    
+    /* Create three menu columns that sits next to each other */
+    /* Left column */
+    .left-column {
+     flex: 10%;
+     background-color: #ffffff;
+    }
+    
+    /* Menu column */
+    .menu-column {
+     flex: 70%;
+     background-color: #ffffff;
+    }
+    
+    /* Right column */
+    .right-column {
+     flex: 10%;
+       display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #ffffff;
+    }
+    
+    .right-column1 {
+      flex: 10%;
+        display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      margin-left: -1100px;
+      margin-top: 100px;
+      
+     }
+    
+    nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+    }
+    
+    li a {
+     display: block;
+     color: #000;
+     font-size: 12px;
+     padding: 5px 16px;
+     text-decoration: none;
+       font-weight: bold;
+    }
+    
+    li a:hover {
+     color: #ddd;
+    }
+    
+       
+    /*###  STYLE NAV SIGN-IN BUTTON  ###*/
+    a.button:link, a.button:visited {
+    background-color: #053573;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 4px;
+    }
+    
+    a.button1:link, a.button1:visited {
+      
+      color: white;
+      padding: 5px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      width: 20.2%;
+    height: 60px;
+    
+    background: #053674;
+    border-radius: 4px;
+      }
+    
+    .search {
+       background-color: #ffffff;
+    }
+    .search .search-container {
+     float: right;
+    }
+    
+    .search:after {
+    display: table;
+    content: "";
+    clear: both;
+       }
+       
+    .search input[type=text] {
+     padding: 9px 150px 9px 5px;
+     margin-top: 12px;
+     font-size: 20px;
+     margin-right: 0px;
+     border-radius: 0 5px 5px 0;
+     border: 1px solid black;
+    }
+    
+    ::placeholder {
+     font-size: 12px;
+    }    
+    
+    .search .search-container button {
+     padding: 15px 25px;
+     margin-top: 8px;
+     background: #F6cc5c;
+     justify-content: flex-end;
+    align-items: center;
+    padding: 12px 9px 12px 20px;
+    gap: 16px;
+    
+    width: 126px;
+    height: 48px;
+    
+    
+    background: rgba(246, 204, 92, 0.75);
+    border-radius: 0px 5px 5px 0px;
+     font-size: 11px;
+     border-radius: 5px 0 0 5px;
+     border: none;
+     cursor: pointer;
+     color: black;
+    }
+    
+    .apple12 {
+      margin-left: 600px;
+      margin-top: -200px;
+    }
+    
+    .applebg {
+      position: relative;
+      width: 171px;
+      height: 159px;
+      left: 279px;
+      top: 0px;
+      
+    
+    background: #ffffff;
+    border-radius: 50%;
+    }
+    
+    .nokiabg {
+      position: relative;
+      width: 171px;
+      height: 159px;
+      left: 279px;
+      top: 0px;
+      
+    
+    background: #ffffff;
+    border-radius: 50%;
+    }
+    
+    .samsungbg {
+      position: relative;
+      width: 171px;
+      height: 159px;
+      left: 279px;
+      top: 0px;
+      
+    
+    background: #ffffff;
+    border-radius: 50%;
+    }
+    
+    .infinixbg {
+      position: relative;
+      width: 171px;
+      height: 159px;
+      left: 279px;
+      top: 0px;
+      
+    
+    background: #ffffff;
+    border-radius: 50%;
+    }
+    .gad1 {
+      width: 40%;
+    height: 80px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    }
+    .tecnobg {
+      position: relative;
+      width: 171px;
+      height: 159px;
+      left: 279px;
+      top: 0px;
+      
+    
+    background: #ffffff;
+    border-radius: 50%;
+    }
+     
+     .container {
+       display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 16px 48px;
+    gap: 16px;
+    
+    position: absolute;
+    width: 100%;
+    height: 181.28px;
+    left: 0px;
+    top: 0.5px;
+    
+    background: #FFFFFF;
+    /* Nav shadow */
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+     }
+    
+     .logo{
+        position: relative;
+       max-width: 40px;
+        max-height: 40px;
+        /* left: -100px; */
+     }
+     .nav{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       padding: 0px 1px 0px 0px;
+       gap: 136px;
+       
+       width: 80%;
+       height: 83.28px;
+       ;
+     }
+     /* for the user in the nav*/
+     .user{
+        position: relative;
+        /* right: -30px; */
+        display: flex;
+        justify-content: space-around;
+     }
+     .user button{
+        background-color: black;
+        width: 150px;
+        color: white;
+        position: relative;
+        padding: 5px;
+        border-radius: 4px;
+        /* right: -90px; */
+     }
+     .usr{
+        position: relative;
+        right: 15px;
+        background-color: gray;
+        max-width: 20px;
+        max-height: 20px;
+     }
+     .headers{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       padding: 0px;
+       gap: 60px;
+       
+       width: 45%;
+       height: 28px;
+       
+     }
+     /* list items and link for nav */
+     ul{
+        position: relative;
+        top: 5px;
+        display: flex;
+        justify-content: space-between;
+     }
+     li{
+        list-style: none;
+        text-decoration: none;
+        padding: 20px;
+     }
+     a{
+        text-decoration: none;
+        color: black;
+        
+     }
+     .new{
+        float: left;
+        position: relative;
+        left: 760px;
+        top: 5px;
+        /* right: -49px; */
+        
+     }
+     .new button{
+        background-color: black;
+        color: white;
+        border-radius: 0;
+        width: 100px;
+        padding: 8px;
+        
+     
+     }
+     .new span{
+        position: relative;
+        right: -10px;
+     }
+     .new input{
+        position: relative;
+        left: -10px;
+        width: 30%;
+        padding: 6px;
+        
+     }
+     
+     /* footer */
+     #footer{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 520px;
+        border-bottom: 1px solid gray;
+        background-color: #E5EBF3;
+     }
+    
+     #footer ul{
+        display: block;
+     }
+     
+     /* footer */
+     .foot{
+        position: relative;
+        bottom: 0;
+        text-align: center;
+        /* margin-top: 30px; */
+       
+        /* background-color: yellowgreen; */
+     }
+     
+     /* body */
+     *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif ;
+        line-height: 1.5em;
+        background-color: #ffffff;
+     }
+    
+     .nav-navbar {
+       display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 1px 0px 0px;
+    gap: 136px;
+    
+    width: 80%;
+    height: 83.28px;
+    
+    background: #FFFFFF;
+    /* Nav shadow */
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+     }
+     
+     .txt h1 {
+       font-family: 'Poppins';
+                           font-style: normal;
+                           font-weight: 700;
+                           font-size: 68px;
+                           line-height: 102px;
+                           
+                           
+                           width: 24%;
+                           height: 102px;
+                           color: #222424;
+                           
+                           text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                           position: relative;
+                           margin-top: 200px;
+     }
+     .update {
+        width: 100%;
+        height: 268px;
+          margin: auto;
+          background-color: #FFF4D6;
+          }
+      
+          
+      form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        width: 24%;
+    height: 50px;
+    
+    background: #FFFFFF;
+    border-radius: 0px;
+    margin-left: 200px;
+        float: left;
+        width: 60%;
+        background: #ffffff;
+          margin-right: 5px;
+      }
+      
+      form.example button {
+        float: left;
+        width: 30%;
+        padding: 10px;
+        width: 200px;
+    height: 50px;
+    
+    background: #053674;
+    border: 2px solid #D9D9D9;
+    border-radius: 0px;
+    
+        
+        color: white;
+        font-size: 17px;
+        
+      
+        cursor: pointer;
+      }
+    
+      .boxcompare button{
+        box-sizing: border-box;
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 60px;
+    gap: 10px;
+    
+    width: 20%;
+    height: 60px;
+    
+    background: #053674;
+    border-radius: 4px;
+    cursor: pointer;
+    
+      }
+    
+      .boxcompare button:hover {
+        background: #0b7dda;
+      }
+    
+      .price {
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32.7243px;
+    line-height: 41px;
+    /* identical to box height, or 125% */
+    
+    
+    /* Dark Blue/Main Primary color */
+    
+    color: #053674;
+      }
+    
+      .gad {
+        width: 20%;
+    height: 58px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20.4527px;
+    line-height: 29px;
+    /* or 140% */
+    
+    
+    color: #222424;
+      }
+    
+      .gad {
+       background-color: #ffffff;
+      }
+    
+      .price {
+       background-color: #ffffff;
+      }
+    
+      .like {
+        margin-top: 300px;
+        position: relative;
+      }
+    
+      .nokia {
+       margin-left: 80px;
+      }
+    
+      .infinixz {
+       margin-left: 80px;
+      }
+    
+      .tecnoc {
+       margin-left: 80px;
+      }
+    
+      .mac {
+       margin-left: 80px;
+      }
+    
+      .applew {
+       margin-left: 80px;
+      }
+    
+      .hplaptop {
+       margin-left: 80px;
+      }
+    
+      .ip13 {
+       margin-left: 80px;
+      }
+    
+      .sam {
+       margin-left: 80px;
+      }
+    
+      .iphxs {
+       margin-left: 80px;
+      }
+    
+      
+      .see {
+       position: relative;
+    width: 127px;
+    height: 28px;
+    left: calc(50% - 127px/2);
+    top: 587.69px;
+    
+    /* Button */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    
+    text-align: center;
+    
+    color: #222424;
+      }
+    
+      .brands {
+       background-color: #E5EBF3;
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 17px;
+    
+    width: 100%;
+    height: 443.65px;
+    justify-content: center;
+    
+      }
+    
+    
+    
+      .nokiac330 {
+        
+        width: 383.59px;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 5px;
+      }
+    
+      .infinixzero {
+        
+        width: 27%;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 580px;
+    margin-top: -452px;
+    margin-bottom: 52px;
+      }
+    
+      .tecno {
+        
+        width: 27%;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 1150px;
+    margin-top: -505px;
+    margin-bottom: 200px;
+      }
+    
+      .macbook {
+        
+        width: 27%;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 5px;
+      }
+    
+      .applewatch {
+        
+        width: 27%;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 580px;
+    margin-top: -452px;
+    margin-bottom: 52px;
+      }
+    
+      .hp {
+        
+        width: 27%;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 1150px;
+    margin-top: -505px;
+    margin-bottom: 200px;
+      }
+    
+      .iphone13 {
+        
+        width: 27%;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 5px;
+      }
+    
+      .samsung {
+        
+        width: 27%;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 580px;
+    margin-top: -452px;
+    margin-bottom: 52px;
+      }
+    
+      .iphonexs {
+        
+        width: 27%;
+    height: 453.33px;
+    
+    background: #FFFFFF;
+    border: 1.05672px solid #CFCECE;
+    box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+    border-radius: 8.45377px;
+    margin-left: 1150px;
+    margin-top: -505px;
+    margin-bottom: 200px;
+      }
+    
+      
+      
+      form.example button:hover {   
+        background: #0b7dda;
+      }
+      
+      form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .footer-col {
+       display: flex;
+    flex-flow: row wrap;
+    gap: 7rem;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 12.5px;
+    background-color: #E5EBF3;
+    }
+    
+    .last-row {
+    border-top:1px solid #000;
+       width: 100%;
+       text-align: center;
+       padding-top: 20px;
+       font-size: 12px;
+       background-color: #E5EBF3;
+    }
+    
+    .cat {
+      background-color: #E5EBF3;
+    
+    }
+    
+    .cat b {
+      background-color: #E5EBF3;
+    }
+    
+    /* Responsive layout WITH FLEX - when the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+    .row {  
+    display: flex;
+    flex-flow: column;
+    }
+    .search .search-container {
+    float: none;
+    }
+    .search input[type=text] {
+    padding: 9px 50px 9px 10px;
+    }
+    
+    }
+    
+    .nokiaa {
+      position: relative;
+      width: 30%;
+      height: 7%;
+      left: 0px;
+      top: 50px;
+    }
+    
+    .nokiasec {
+      position: relative;
+      width: 30%;
+      height: 14%;
+      left: 91.01px;
+      top: 24.54px;
+    
+    }
+    
+    .nokiamini1 {
+      position: relative;
+      width: 14%;
+      height: 7%;
+      left: -100px;
+      top: 150px;
+      
+    }
+    
+    .nokiamini2 {
+      position: relative;
+      width: 14%;
+      height: 7%;
+      left: -90px;
+      top: 150px;
+    }
+    
+    .tt {
+      font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20.4527px;
+    margin-top: 200px;
+    margin-left: 50px;
+    }
+    
+    .heading {
+      position: relative;
+    width: 35%;
+    height: 1%;
+    left: 456px;
+    top: -300px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    
+    }
+    
+    .by {
+      position: relative;
+    width: 5%;
+    height: 1%;
+    left: 456px;
+    top: -270px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1%;
+    
+    /* identical to box height, or 205% */
+    
+    
+    /* Gray/5x */
+    
+    color: #959595;
+    
+    }
+    
+    .noks {
+      position: relative;
+    width: 5%;
+    height: 1%;
+    left: 475px;
+    top: -270px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1%;
+    
+    /* identical to box height, or 205% */
+    
+    
+    /* Gray/5x */
+    
+    color: #053674;
+    
+    }
+    
+    .line-1 {
+      height: 0.5%;
+      width: 90%;
+      border: 1px solid #CFCECE;
+      margin-top: -230px;
+      left: -95px;
+      
+    }
+    
+    .best{
+      position: relative;
+      width: 9%;
+      height: 1%;
+      left: 456px;
+      top: 5px;
+    
+    }
+    
+    .test {
+      position: relative;
+      width: 9%;
+      height: 1%;
+      left: 306px;
+      top: 40px;
+    }
+    
+    .line-2 {
+      height: 0.5%;
+      width: 90%;
+      border: 1px solid #CFCECE;
+      margin-top: 50px;
+      left: -95px;
+      
+    }
+    
+    .bell-o {
+      color: gray;
+      font-size: 20px;
+      font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1%;
+    }
+    
+    .bell-o:hover {
+      color: red;
+    }
+    
+    div {
+      color: gray;
+    }
+    
+    .headings {
+      position: relative;
+    width: 29%;
+    height: 1%;
+    left: 456px;
+    top: 30px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    
+    }
+    
+    .online {
+      position: relative;
+    width: 15%;
+    height: 1%;
+    left: 455px;
+    top: 50px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1%;
+    
+    /* identical to box height, or 205% */
+    
+    
+    /* Gray/5x */
+    
+    color: #1A1A1A;
+    
+    }
+    .nokiap {
+      position: relative;
+    width: 40%;
+    height: 60%;
+    left: 456px;
+    top: 80px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 90%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    
+    }
+    
+    .updated {
+      position: relative;
+    width: 23%;
+    height: 1%;
+    left: 988px;
+    top: 60px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #959595
+    }
+    
+    .slot{
+      position: relative;
+      width: 9%;
+      height: 1%;
+      left: 456px;
+      top: 100px;
+    }
+    
+    .slotp {
+      position: relative;
+    width: 40%;
+    height: 100%;
+    left: 620px;
+    top: 32px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 170%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #959595
+    }
+    
+    .price7 {
+      font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32.7243px;
+    line-height: 41px;
+    margin-left: -500px;
+    margin-top: 400px;
+    /* identical to box height, or 125% */
+    
+    
+    /* Dark Blue/Main Primary color */
+    
+    color: #053674;
+    }
+    
+    .line-3 {
+      height: 0.5%;
+      width: 90%;
+      border: 1px solid #CFCECE;
+      top: 50px;
+      margin-top: -200px;
+      left: -50px;
+    }
+    
+    .desc {
+      position: relative;
+    width: 37%;
+    height: 1%;
+    left: 500px;
+    top: 50px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    
+    }
+    
+    .descrip {
+      position: relative;
+    width: 70%;
+    height: 200%;
+    left: 200px;
+    top: 100px;
+    margin-bottom: 20px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 200%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    }
+    
+    .priced {
+      position: relative;
+    width: 29%;
+    height: 1%;
+    left: 200px;
+    top: 70px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    }
+    
+    .descrip1 {
+      position: relative;
+    width: 70%;
+    height: 200%;
+    left: 200px;
+    top: 200px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 200%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    }
+    
+    .priced1 {
+      position: relative;
+    width: 29%;
+    height: 1%;
+    left: 200px;
+    top: 250px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    }
+    
+    .list {
+      position: relative;
+    width: 70%;
+    height: 200%;
+    left: 200px;
+    top: 300px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 200%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    }
+    
+    .list1 {
+      position: relative;
+    width: 70%;
+    height: 200%;
+    left: 400px;
+    top: -1060px;
+    margin-bottom: -800px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 200%;
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    }
+    
+    .list0 {
+      position: relative;
+    width: 70%;
+    height: 200%;
+    left: 200px;
+    top: 180px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 200%;
+    
+    /* identical to box height, or 119% */
+    
+    
+    /* Gray/Main grey ( neutral ) */
+    
+    color: #1A1A1A;
+    }
+    

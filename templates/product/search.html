@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+<body>
+    <div class="page-cover">
+        <!-- #### CREATE NAV SECTION AND SPLIT INTO COLUMNS #### -->
+         <div class="white-bg">
+            <div class="row">
+                <div class="left-column">
+                    <img src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/singup-update/Frame%202495.png" width="50">
+                </div>
+                <div class="menu-column">
+                    <nav>
+                        <ul>
+                          <li><a class="active" href="/home">Home</a></li>
+                          <li><a href="#">Deals</a></li>
+                          <li><a href="#">Categories</a></li>
+                          <li><a href="#">Stores</a></li>
+                          <li><a href="#">Price Tracker</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                {% if user.is_authenticated %}
+                <div class="right-column"> 
+                    <a href="/signout">Signout</a>
+                </div>
+                {% else %}
+                <div class="right-column">
+                    <a href="/signin">Signin</a>
+                </div>
+                {% endif %}
+            </div>
+             <!-- #### SEARCH FORM #### -->
+            <div class="search">
+                   <div class="search-container">
+                         <form action="/products/search" method="post">
+                             <input type="text" placeholder="what are you searching for?" name="search" id="search">
+                            <button type="submit">Search <i class="fa fa-search"></i></button>
+                        </form>
+                        
+                    </div>
+            </div>
+            <!--  #### CREATE TWO ROWS FOR MAIN PAGE ####  -->
+             <div class="main-section">
+                 <div class="left">
+                     <img src="{{ cheapestimage }}" style="width: 90%">
+                     <img src="{{ cheapestimage }}" style="width: 90%">
+                 </div>
+                 <div class="right">
+                     <h2>{{ cheapestname }} </h2>
+                     <p class="price-para">NGN <span style="font-size:25px;">{{ cheapestprice }}</span></p>
+                     <p class="price-para"><a href="{{ cheapestlink }}">Go to Store</a></p>
+                     
+             <!--  #### CREATE FOOTER ####  -->
+            <footer class="footer-col">
+                <div>
+                    <h4>Categories</h4><br>
+                    Mobiles <br>
+                    Laptops<br>
+                    Tablets <br> 
+                    Accessories<br>
+                    Appliances <br>
+                </div>
+                <div>
+                    <h4>Brands</h4><br>
+                    Apple<br>
+                    Samsung<br>
+                    Tecno<br>
+                    Infinix<br>
+                    Nokia<br>
+                    Hp<br>
+                    Lenovo<br>
+                </div>
+                <div>
+                    <h4>Site</h4><br>
+                    About us<br>
+                    Team<br>
+                    Merchant sign up<br>
+                    User Guide<br>
+                    User Guide
+                </div>
+                <div>
+                    <h4>Support</h4><br>
+                    Contact Us<br>
+                    Help Center<br>
+                    Merchant Sign Up<br>
+                    Reviews<br>
+                    Privacy Policy
+                </div>
+                <div class="last-row">
+                    (c) 2022 Shopsmart.com. All Rights Reserved
+                </div>
+            </footer>
+        </div>
+        </div>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #efefef;
+        padding: 0;
+        }
+
+        .white-bg {
+            background-color: #fff;
+            width: 85%;
+            margin: auto;
+            }
+            
+        /*### CREATE FLEX NAV ROW ###*/
+        .row {  
+        display: flex;
+        flex-flow: row wrap;
+            padding: 20px 20px 0 20px;
+        }
+
+        /* CREATE THREE COLUMN FOR NAV ROW */
+        /* Left column */
+        .left-column {
+        flex: 10%;
+            text-align: center;
+        }
+
+        /* Menu column */
+        .menu-column {
+        flex: 70%;
+        background-color: white;
+        }
+
+        /* Right column */
+        .right-column {
+        flex: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            font-size: 12px;
+        }
+
+        nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        }
+
+        li a {
+        display: block;
+        color: #000;
+        font-size: 12px;
+        padding: 5px 16px;
+        text-decoration: none;
+            font-weight: bold;
+        }
+
+        li a:hover {
+        color: #ddd;
+        }
+
+            
+        /*###  STYLE MENU SIGN-IN BUTTON  ###*/
+        a.button:link, a.button:visited {
+        background-color: #053573;
+        color: white;
+        padding: 5px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        }
+
+        /*###  STYLE MENU SEARCH  ###*/
+        .search .search-container {
+        float: right;
+        padding: 0 20px 20px 20px;
+        }
+        .search {
+            border-bottom: 3px solid #f9f9f9;
+        }
+
+        .search:after {
+        display: table;
+        content: "";
+        clear: both;
+            }
+            
+        .search input[type=text] {
+        padding: 6px 150px 6px 5px;
+        margin-top: 8px;
+        font-size: 14px;
+        border-radius:5px 0 0 5px;
+        border: 1px solid #000;
+        border-right: none;
+        height: 30px;
+        margin-right: -10px;
+        }
+
+        .search textarea:focus, input:focus{
+            outline: none;
+        }
+
+        ::placeholder {
+        font-size: 12px;
+        }    
+
+        .search .search-container button {
+        padding: 9px 10px 9px 10px;
+        margin-top: px;
+        background: #dcdc00;
+        font-size: 11px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid #000;
+        cursor: pointer;
+        color:#000;
+        height: 30px;
+        margin-left: 0;
+        border-left: none;
+        }
+        /*### CREATE TWO COLUMNS ###*/
+
+        .left {
+            float: left;
+            width: 30%;
+            padding: 20px;
+        }
+        .right {
+            float: left;
+            width: 70%;
+            padding: 20px;
+        }
+        .main-section::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+        .price-para {
+            margin: 0;
+        }
+        /*### STYLE STAR ICONS ###*/
+        .fa-star {
+            color: #000;
+            margin: 0;
+        }
+        /*### STYLE FIRST THREE BUTTONS ###*/
+        .sam-buttons {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        /*### STYLE THREE TAB BUTTONS ###*/
+        .tab-buttons {
+            background-color: #efefef;
+            border: none;
+            padding: 10px 20px;
+            margin: 0px;
+        }
+        .online-shops {
+        background-color: #fff;
+        border-top: 1px solid #000;
+        }
+
+        /*### STYLE LISTINGS ###*/
+
+        .list-content{
+            float: left;
+            width: 75%;    
+            font-size: 12px;
+            padding: 0;
+        }
+        i {
+            margin-right: 10px;
+        }
+        .list-button{
+            float: left;
+            width: 25%;    
+            padding: 30px 20px 30px 0;
+        }
+        .listing:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .store-button {
+            background-color: darkblue;
+            padding: 10px 25px;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 12px;
+            margin: 0;
+            float: right;
+        }
+        .listing {
+            border: 1px solid #ddd;
+            box-shadow: 0;
+            padding: 0 20px;
+            margin: 10px 0;
+        }
+        /*#### STYLE TOP BUTTON PARAGRAPH ####*/
+        .top-button {
+        font-size:12px;  
+            float: right;
+        }
+        .mobile-button {
+        font-size:12px;
+        margin-left: 19px;
+        }
+        /*#### STYLE RELATED PRODUCTS ####*/
+        .one, .two, .three, .four {
+            float: left;
+            width: 24%;
+        }
+        .one p, .two p, .three p, .four p{
+            font-size: 12px;
+        }
+        .related-products {
+            content: "";
+            clear: both;
+            display: table;
+            
+        }
+        .related-button {
+            background-color: darkblue;
+            padding: 10px 15px;
+            color: #fff;
+            border: none;
+            text-align: center;
+        }
+        .next-button { 
+        padding-top: 200px;
+        }
+        /*#### STYLE SPECIFICATIONS ####*/
+        .popular, .video {
+        height: 300px;
+            padding-top: 20px;
+        }
+        /* .spec-details {
+            
+        } */
+        .spec, ul {
+            font-size: 12px;
+        }
+        /*#### STYLE RATING ####*/
+        .ratings, .review-box h4 {
+        padding: 0 100px;
+            font-size: 14px;
+        }
+
+        .review-box::after {
+            content: "";
+            clear: both;
+            display: table;    
+        }
+        .star-rating {
+            padding-left: 100px;
+        }
+        /*### STYLE PAGINATION ###*/
+        .center {
+        text-align: center;
+            padding: 40px 0;
+        }    
+        .pagination {
+        display: inline-block;
+        }
+
+        .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        }
+
+        .pagination a.active {
+        background-color: #042D61;
+        color: white;
+        border: 1px solid #042D61;
+        }
+
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+
+        .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        }
+
+        .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        }
+
+        /*### STYLE FOOTER SECTION ###*/
+        .footer-col {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 5rem;
+        justify-content: center;
+        padding: 50px 0;
+        font-size: 12.5px;
+        background-color: #ddd;
+            }
+            
+            .last-row {
+            border-top:1px solid #000;
+                width: 100%;
+                text-align: center;
+                padding: 20px;
+                font-size: 12px;
+            }
+        .footer-col h4 {
+            color: #053573;
+        }
+
+        /* Responsive layout WITH FLEX - when the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
+
+        @media screen and (max-width: 775px) {
+        /*###  AJUST ROW ON MOBILE  ###*/  
+        .row {  
+        display: flex;
+        flex-flow: column;
+        }
+        /*###  STYLE MENU SEARCH  ###*/
+        .search .search-container {
+        float: none;
+        width: 85%;
+        margin: auto;
+        }
+        .search input[type=text] {
+        padding: 20px;
+        }
+        /*###  WHITE CONTENT BOX  ###*/
+        .white-bg {
+            background-color: #fff;
+            width: auto;
+            }
+        /*###  STYLE MENU SEARCH  ###*/   
+        .search input[type=text] {
+        padding: 9px 5px 5px 5px;
+        margin-top: 15px;
+        font-size: 14px;
+        border-radius:  0;
+        border: 1px solid #efefef;
+        height: 30px;
+        }
+
+        ::placeholder {
+        font-size: 12px;
+        }    
+
+        .search .search-container button {
+        padding: 9px 5px 9px 5px;
+        background: #000;
+        font-size: 11px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid #efefef;
+        cursor: pointer;
+        color: #fff;
+        height: 30px;
+        }
+            /*#### STYLE LIST SECTION ####*/
+            .list-content {
+                float: none;
+                width: 100%;
+            }
+        .list-button, .left, .right {
+                float: none;
+                width: 100%;
+            }
+            .top-button, .store-button, .store-button, .mobile-button { 
+            float: none;
+                margin: 0;
+        }
+            /*#### STYLE RELATED PRODUCT ####*/
+            .one {
+            float: left;
+            width: 90%;
+        }
+            .two, .three, .four, .popular, .left, .video {
+            display: none;
+        }
+            .ratings {
+        padding: 0 20px;
+        }
+            .star-rating {
+            padding-left: 50px;
+        }
+        }
+    </style>
+</body>
+</html>
